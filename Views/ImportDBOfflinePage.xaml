@@ -1,0 +1,22 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InventurApp.Views.ImportDBOfflinePage"
+             xmlns:resources="clr-namespace:InventurApp.Culture" 
+             xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             Title="import File">
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.select_file}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:ImportDBOfflineViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="20,30,20,0" Spacing="25">
+            <!--<Button  Text="import Countinu(just to try the INT.dat file)" FontSize="15" Command="{Binding ImportDatCommand}" />-->
+            <Button  Text="{x:Static resources:AppResources.import_item_list_offline}" Command="{Binding ImportArtikelDatCommand}" />
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"    Color="{StaticResource Primary}" HeightRequest="140" VerticalOptions="Center"  ></ActivityIndicator>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

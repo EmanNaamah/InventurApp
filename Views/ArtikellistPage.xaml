@@ -1,0 +1,42 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="http://schemas.devexpress.com/xamarin/2014/forms/datagrid" 
+             xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             x:Class="InventurApp.Views.ArtikellistPage"
+             xmlns:resources="clr-namespace:InventurApp.Culture" >
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.import_item_list}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:ArtikellistViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <dxg:DataGridView x:Name="grid1" ShowAutoFilterRow="True" ColumnHeaderHeight="60" AutoFilterRowHeight="40" ItemsSource="{Binding Articles}" RowHeight="45">
+                <dxg:DataGridView.CellStyle >
+                    <dxg:CellStyle Padding="5" FontColor="Black" FontSize="14" SelectionColor="#f5be40" SelectionFontColor="Black"/>
+                </dxg:DataGridView.CellStyle>
+                <dxg:DataGridView.ColumnHeaderStyle>
+                    <dxg:ColumnHeaderStyle FontSize="14" FontColor="#000" FontAttributes="Bold" />
+                </dxg:DataGridView.ColumnHeaderStyle>
+                <dxg:DataGridView.Columns >
+                    <dxg:TextColumn FieldName="Artikelnummer" Width="150" Caption="Item"  AutoFilterCondition="Contains"/>
+                    <dxg:TextColumn FieldName="ArtBezeichnung1" Width="150" Caption="{x:Static resources:AppResources.Description}"  AutoFilterCondition="Contains"/>
+                    <dxg:TextColumn FieldName="KZArtMengeneinheit1" Caption="ME1" MinWidth="150"/>
+                    <dxg:TextColumn FieldName="KZArtMengeneinheit2" Caption="ME2" MinWidth="100"/>
+                    <dxg:TextColumn FieldName="WgrTextAbmasse1" Caption="{x:Static resources:AppResources.Abmassfeld1}" MinWidth="100"/>
+                    <dxg:TextColumn FieldName="WgrTextAbmasse2" Caption="{x:Static resources:AppResources.Abmassfeld2}" Width="150" />
+                    <dxg:TextColumn FieldName="WgrTextAbmasse3" Caption="{x:Static resources:AppResources.Abmassfeld3}" MinWidth="100"/>
+                    <dxg:TextColumn FieldName="WgrTextAbmasse4" Caption="{x:Static resources:AppResources.Abmassfeld4}" MinWidth="100"/>
+                    <dxg:CheckBoxColumn FieldName="ArtSeriennummernfaehigJN" Caption="{x:Static resources:AppResources.seriennummerfähig}"  MinWidth="180"/>
+                    <dxg:CheckBoxColumn FieldName="ArtChargenfaehigJN"  Caption="{x:Static resources:AppResources.Chargenfahig}"  MinWidth="100"/>
+                    <dxg:CheckBoxColumn FieldName="ArtUrsprungsnachweisJN" Caption="{x:Static resources:AppResources.kzLand}"  MinWidth="100"/>
+                    <dxg:TextColumn FieldName="ArtEAN"  Caption="EAN Code" MinWidth="100"/>
+                    <dxg:TextColumn FieldName="ArtEdiKennung"  Caption="EDI Code" MinWidth="100"/>
+                    <dxg:TextColumn FieldName="ArtBarcode"  Caption="Barcode" MinWidth="100"/>
+                </dxg:DataGridView.Columns>
+            </dxg:DataGridView>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

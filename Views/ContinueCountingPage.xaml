@@ -1,0 +1,81 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:InventurApp.Culture"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             x:Class="InventurApp.Views.ContinueCountingPage"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <vm:ContinueCountingViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="430" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <ScrollView  Orientation="Vertical">
+                   <StackLayout Orientation="Vertical" Padding="15,15,15,10" Spacing="2">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="60">
+                            <StackLayout Orientation="Vertical" Grid.Column="0" Grid.Row="0" Spacing="6">
+                                <Label Text="{x:Static resources:AppResources.User}" />
+                                <Label Text="{x:Static resources:AppResources.StoregCode}" />
+                                <Label Text="{x:Static resources:AppResources.Item}"/>
+                                <Label Text="{x:Static resources:AppResources.Description}"/>
+                                <Label Text="{x:Static resources:AppResources.Alreadycounted}"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Grid.Column="1" Grid.Row="0" Spacing="6">
+                                <Label Text="{Binding UserNumber}"/>
+                                <Label Text="{Binding StorageId}"/>
+                                <Label Text="{Binding ArticleModel.ArticleNumber}"/>
+                                <Label Text="{Binding ArticleModel.Descreption }"/>
+                                <Label Text="{Binding ArticleModel.AlreadyCounted }"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" Margin="0,20,10,10" Spacing="10">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="10">
+                                <dxe:TextEdit x:Name="TxtBarcode1" LabelText= "{x:Static resources:AppResources.Scanbarcode}" Text="{Binding SearchedArticleNumber}" TextChanged="TxtBarcode1_TextChanged" TabIndex="1" Completed="EntrySearch_Completed" />
+                                <ImageButton  x:Name="BtnSearch" Source="scanicon.png"  HorizontalOptions="StartAndExpand" Clicked="BtnScannNewItem_Clicked"  VerticalOptions="CenterAndExpand"  WidthRequest="55"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Spacing="10">
+                                <dxe:TextEdit x:Name="Charge"  Text="{Binding ArticleModel.Charge}"  IsEnabled="{Binding ArticleModel.ChargeTextEnabled}"  IsVisible="{Binding ArticleModel.ChargeTextEnabled}"  LabelText="{x:Static resources:AppResources.lot}" TextChanged="TxtCharge_TextChanged" WidthRequest="250" Completed="TextEntry_completed"/>
+                                <ImageButton  x:Name="BtnCharge" Source="scanicon.png"  HorizontalOptions="StartAndExpand" Clicked="BtnScanCharge_Clicked" IsEnabled="{Binding ArticleModel.ChargeTextEnabled}"  IsVisible="{Binding ArticleModel.ChargeTextEnabled}" VerticalOptions="CenterAndExpand"  WidthRequest="55"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" >
+                                <ImageButton  x:Name="addseri"   Source="plus.png" WidthRequest="20" IsVisible="{Binding ArticleModel.AddSerButtonEnabled}" IsEnabled="{Binding ArticleModel.AddSerButtonEnabled}" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0" Pressed="BtnAddSeri_Pressed" />
+                                <Label        x:Name="sirNrListCount" Text="{Binding ArticleModel.Measuringunit1}"         TextColor="Green" HorizontalOptions="Center" Margin="0,7,0,0" FontSize="16" IsVisible="{Binding ArticleModel.AddSerButtonEnabled}"/>
+                                <Label        x:Name="sirNrAdd"       Text="{x:Static resources:AppResources.Addserialnr}" TextColor="Green" HorizontalOptions="Center" Margin="0,7,0,0" FontSize="16" IsVisible="{Binding ArticleModel.AddSerButtonEnabled}"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Spacing="20">
+                            <StackLayout Orientation="Vertical"  Spacing="5" WidthRequest="220">
+                                <dxe:TextEdit  x:Name="Kzland"          Text="{Binding ArticleModel.KZLand}"          LabelText="{x:Static resources:AppResources.kzLand}"   Completed="TextEntry_completed"   WidthRequest="250"              IsVisible="{Binding ArticleModel.IsKZLandEnable}" IsEnabled="{Binding ArticleModel.IsKZLandEnable}" TextChanged="TxtKzLand_TextChanged"  MaxCharacterCount="3" />
+                                <dxe:NumericEdit  x:Name="AmountNumeric"  Value="{Binding ArticleModel.Measuringunit1}" LabelText="{Binding Sizes.Measuringunit1TextCaption}"  Completed="TextEntry_completed" WidthRequest="250" TabIndex="1" IsEnabled="{Binding Sizes.Measuringunit1Enabled}" />
+                                <dxe:NumericEdit  x:Name="AmountNumeric2" Value="{Binding ArticleModel.Measuringunit2}" LabelText="{Binding Sizes.Measuringunit2TextCaption}"  Completed="TextEntry_completed" WidthRequest="250" TabIndex="2" IsVisible="{Binding Sizes.Measuringunit2Enabled}" IsEnabled="{Binding Sizes.Measuringunit2Enabled}" />
+                                <dxe:NumericEdit  x:Name="SizeText1"      Value="{Binding ArticleModel.SizeText1value}" LabelText="{Binding Sizes.SizeTextCaption1}"           Completed="TextEntry_completed" WidthRequest="250" TabIndex="3" IsVisible="{Binding Sizes.SizeText1Enabled}"      IsEnabled="{Binding Sizes.SizeText1Enabled}"   />
+                                <dxe:NumericEdit  x:Name="SizeText2"      Value="{Binding ArticleModel.SizeText2value}" LabelText="{Binding Sizes.SizeTextCaption2}"           Completed="TextEntry_completed" WidthRequest="250" TabIndex="4" IsVisible="{Binding Sizes.SizeText2Enabled}"      IsEnabled="{Binding Sizes.SizeText2Enabled}"   />
+                                <dxe:NumericEdit  x:Name="SizeText3"      Value="{Binding ArticleModel.SizeText3value}" LabelText="{Binding Sizes.SizeTextCaption3}"           Completed="TextEntry_completed" WidthRequest="250" TabIndex="5" IsVisible="{Binding Sizes.SizeText3Enabled}"      IsEnabled="{Binding Sizes.SizeText3Enabled}"   />
+                                <dxe:NumericEdit  x:Name="SizeText4"      Value="{Binding ArticleModel.SizeText4value}" LabelText="{Binding Sizes.SizeTextCaption4}"           Completed="TextEntry_completed" WidthRequest="250" TabIndex="6" IsVisible="{Binding Sizes.SizeText4Enabled}"      IsEnabled="{Binding Sizes.SizeText4Enabled}"  />
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical" Spacing="5">
+                                <ImageButton  x:Name="BtnSearch2"   Source="save.icon"         Pressed="BtnSave_Pressed"         WidthRequest="60"  HeightRequest="60" CornerRadius="30" />
+                                <Label Text="{x:Static resources:AppResources.Save}"           FontSize="12" HorizontalOptions="CenterAndExpand"/>
+                                <ImageButton  x:Name="BtnSearch3"   Source="newscan.png"       Pressed="BtnNewScan_Pressed"      WidthRequest="60"  HeightRequest="60" CornerRadius="30" />
+                                <Label Text="{x:Static resources:AppResources.new_scan}"       FontSize="12" HorizontalOptions="CenterAndExpand"/>
+                                <ImageButton  x:Name="BtnSearch4"   Source="changstoreg.png"   Pressed="BtnChangeStoreg_Pressed" WidthRequest="60"  HeightRequest="60" CornerRadius="30" />
+                                <Label Text="{x:Static resources:AppResources.change_storage}" FontSize="10" HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                      </StackLayout>
+                   </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="{StaticResource Primary}" HeightRequest="140" VerticalOptions="Center"  ></ActivityIndicator>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

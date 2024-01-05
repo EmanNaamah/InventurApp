@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:InventurApp.Culture"
+             xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             x:Class="InventurApp.Views.ChangeStorag">
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.change_storage}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:NewCountingViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <ScrollView Grid.Row="1">
+                    <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                        <dxe:TextEdit x:Name="TxtStoregcode" LabelText= "{x:Static resources:AppResources.StoregCode}" TextChanged="TxtBarcode1_TextChanged" Completed="save_New_StorageCode" Text="{Binding StorageCode}"/>
+                        <ImageButton  x:Name="BtnSearch" Source="scanicon.png"  HorizontalOptions="Center" Clicked="BtnScan_Clicked"  VerticalOptions="CenterAndExpand"  WidthRequest="55" Margin="0,13,0,10"/>
+                        <Button Text="{x:Static resources:AppResources._continue}"  Command="{Binding SaveNewStorageNr}"  HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

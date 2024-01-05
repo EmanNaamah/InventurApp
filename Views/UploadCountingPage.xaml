@@ -1,0 +1,26 @@
+﻿
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             x:Class="InventurApp.Views.UploadCountingPage"
+              xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors" 
+              xmlns:resources="clr-namespace:InventurApp.Culture" >
+
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.upload_counting}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:UploadCountingViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin=" 20,50,20,10" >
+            <Label Text="{x:Static resources:AppResources.please_select_InventurId}"></Label>
+            <dxe:ComboBoxEdit IsEnabled="{Binding IsInventuryNumberListEnabled}" ItemsSource="{Binding InventuryNumberList}"
+                              SelectedItem="{Binding SelectedInventuryNumber}" FocusedBorderColor="{StaticResource Primary}" BorderColor="{StaticResource Primary}"  Margin="0,0,0,20"/>
+            <Button Margin="0,30,0,0" Text="{x:Static resources:AppResources.upload_counting}" HorizontalOptions="Center" 
+                        Command="{Binding UploadInventurListCommand}" />
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"    Color="{StaticResource Primary}" HeightRequest="140" VerticalOptions="Center"  ></ActivityIndicator>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

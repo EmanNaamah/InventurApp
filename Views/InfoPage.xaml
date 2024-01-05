@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             x:Class="InventurApp.Views.InfoPage" xmlns:resources="clr-namespace:InventurApp.Culture" 
+             Title="Info">
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.info}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:InfoViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#f5be40</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        
+        <StackLayout Orientation="Vertical" Spacing="10" Margin="10">
+            <StackLayout Margin="20">
+                <Image Source="{AppThemeBinding Light=Miclasv2.png, Dark=darklogo.png}" Margin="50,-10,50,0" />
+            </StackLayout>
+           <Label Text="{x:Static resources:AppResources.ERPName} "  FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Secondry}" />
+            <Label Text="{x:Static resources:AppResources.ERPStradresse}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Secondry}" />
+            <Label Text="{x:Static resources:AppResources.ERPStadtadresse}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" TextColor="{StaticResource Secondry}" />
+            <Button  Text="HomePage" Command="{Binding OpenWebCommand}" HorizontalOptions="Center" Margin="0,20,0,0"/>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

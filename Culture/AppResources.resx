@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abmassfeld1" xml:space="preserve">
+    <value>dimension1</value>
+  </data>
+  <data name="Abmassfeld2" xml:space="preserve">
+    <value>dimension3</value>
+  </data>
+  <data name="Abmassfeld3" xml:space="preserve">
+    <value>dimension4</value>
+  </data>
+  <data name="Abmassfeld4" xml:space="preserve">
+    <value>dimension2</value>
+  </data>
+  <data name="Addserialnr" xml:space="preserve">
+    <value>Please enter the serial number</value>
+  </data>
+  <data name="addSerNR" xml:space="preserve">
+    <value>Add serial number</value>
+  </data>
+  <data name="Alert" xml:space="preserve">
+    <value>warning</value>
+  </data>
+  <data name="Alreadycounted" xml:space="preserve">
+    <value>Already counted</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="ApiKey" xml:space="preserve">
+    <value>Api Key</value>
+  </data>
+  <data name="Arrive" xml:space="preserve">
+    <value>Arrive</value>
+  </data>
+  <data name="Artikel_list" xml:space="preserve">
+    <value>Imported items</value>
+  </data>
+  <data name="AskSharefile" xml:space="preserve">
+    <value>Do you want share the DataBase ?</value>
+  </data>
+  <data name="askToSeriNRAmount" xml:space="preserve">
+    <value>Number of serial numbers does not match the specified quantity. Do you want to adjust the amount?”</value>
+  </data>
+  <data name="ask_ upload_Aktuel_StoragList" xml:space="preserve">
+    <value>Would you like to upload the current inventory list?</value>
+  </data>
+  <data name="Ask_delete_StoragList" xml:space="preserve">
+    <value>Do you want to delete the ongoing counting?</value>
+  </data>
+  <data name="ask_leave_page_counting" xml:space="preserve">
+    <value>Are you sure to leave the current counting?</value>
+  </data>
+  <data name="attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="capture" xml:space="preserve">
+    <value>Erfassen</value>
+  </data>
+  <data name="capture1" xml:space="preserve">
+    <value>capture</value>
+  </data>
+  <data name="changestorage" xml:space="preserve">
+    <value>change storage</value>
+  </data>
+  <data name="change_storage" xml:space="preserve">
+    <value>Change Storage</value>
+  </data>
+  <data name="Chargenfahig" xml:space="preserve">
+    <value>lot capable</value>
+  </data>
+  <data name="checkInternetConnection" xml:space="preserve">
+    <value>Please check your settings or your internet connection</value>
+  </data>
+  <data name="CheckValue" xml:space="preserve">
+    <value>please Check your Value!!</value>
+  </data>
+  <data name="close" xml:space="preserve">
+    <value>Are you sure you want to navigate away from this page?</value>
+  </data>
+  <data name="closeapp" xml:space="preserve">
+    <value>Do you want to quit the app?</value>
+  </data>
+  <data name="code" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="Committee" xml:space="preserve">
+    <value>Committee</value>
+  </data>
+  <data name="Completedmessage" xml:space="preserve">
+    <value>Completed message</value>
+  </data>
+  <data name="confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="continue_counting" xml:space="preserve">
+    <value>Continue Counting</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="deleteSerialNR" xml:space="preserve">
+    <value>Do you want to delete the serial numbers?</value>
+  </data>
+  <data name="delete_counting_dialog_description" xml:space="preserve">
+    <value>All data will be deleted. Are you sure?</value>
+  </data>
+  <data name="delete_counting_dialog_title" xml:space="preserve">
+    <value>Delete counting?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Description1" xml:space="preserve">
+    <value>Description1</value>
+  </data>
+  <data name="DeviceID" xml:space="preserve">
+    <value>Device ID</value>
+  </data>
+  <data name="dontallowleave" xml:space="preserve">
+    <value>It is not possible to exit</value>
+  </data>
+  <data name="dontpermission" xml:space="preserve">
+    <value>You do not have this permission !</value>
+  </data>
+  <data name="download_item_list" xml:space="preserve">
+    <value>Download Item List</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="enterpass" xml:space="preserve">
+    <value>Please enter password</value>
+  </data>
+  <data name="enterserialnumer" xml:space="preserve">
+    <value>Please Enter all Serialnumber!</value>
+  </data>
+  <data name="ERPName" xml:space="preserve">
+    <value>ERPall Business Software Gmbh </value>
+  </data>
+  <data name="ERPStadtadresse" xml:space="preserve">
+    <value>47877 Willich </value>
+  </data>
+  <data name="ERPStradresse" xml:space="preserve">
+    <value>Jakob-Kaiser-Str. 7, </value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="errorexportedDataBase1" xml:space="preserve">
+    <value>The database was not saved successfully!</value>
+  </data>
+  <data name="ErrorFilltheFilde" xml:space="preserve">
+    <value>please fill in all fields!</value>
+  </data>
+  <data name="errorsaveDataBase" xml:space="preserve">
+    <value>The database was not saved successfully!</value>
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="export_counting" xml:space="preserve">
+    <value>Export Counting</value>
+  </data>
+  <data name="export_counting_offline" xml:space="preserve">
+    <value>Export Counting (Offline)</value>
+  </data>
+  <data name="export_file" xml:space="preserve">
+    <value>Export file</value>
+  </data>
+  <data name="export_success_dialog_description" xml:space="preserve">
+    <value>Your file has been successfully exported.</value>
+  </data>
+  <data name="export_success_dialog_title" xml:space="preserve">
+    <value>Export finished</value>
+  </data>
+  <data name="fileisntDB" xml:space="preserve">
+    <value>this file is not DB</value>
+  </data>
+  <data name="Goodamount" xml:space="preserve">
+    <value>Good Amont</value>
+  </data>
+  <data name="IDCardNr" xml:space="preserve">
+    <value>IDCardNr</value>
+  </data>
+  <data name="IDNumber" xml:space="preserve">
+    <value>ID-Number</value>
+  </data>
+  <data name="import_item_list" xml:space="preserve">
+    <value>Import Item List</value>
+  </data>
+  <data name="import_item_list_offline" xml:space="preserve">
+    <value>Import Item List (Offline)</value>
+  </data>
+  <data name="import_success_dialog_description1" xml:space="preserve">
+    <value>Your file has been successfully imported.</value>
+  </data>
+  <data name="import_success_dialog_title1" xml:space="preserve">
+    <value>import finished</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="interrupt" xml:space="preserve">
+    <value>interrupt</value>
+  </data>
+  <data name="Inventoryread" xml:space="preserve">
+    <value>Inventory has beed read in:</value>
+  </data>
+  <data name="inventur_list" xml:space="preserve">
+    <value>Counted items</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Items:</value>
+  </data>
+  <data name="item_not_found_dialog_description" xml:space="preserve">
+    <value>There is no matching item in the database.</value>
+  </data>
+  <data name="item_not_found_dialog_title" xml:space="preserve">
+    <value>Item not found</value>
+  </data>
+  <data name="kzLand" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Languge" xml:space="preserve">
+    <value>Languge:</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Logoutautomatically(seconds)" xml:space="preserve">
+    <value>Log out automatically (seconds)</value>
+  </data>
+  <data name="lot" xml:space="preserve">
+    <value>lot</value>
+  </data>
+  <data name="lot_missing_dialog_description" xml:space="preserve">
+    <value>Lot field is required.</value>
+  </data>
+  <data name="lot_missing_dialog_title" xml:space="preserve">
+    <value>Lot missing</value>
+  </data>
+  <data name="menge" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="menu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="MinValue" xml:space="preserve">
+    <value>Minimum Value ist 20</value>
+  </data>
+  <data name="newscan" xml:space="preserve">
+    <value>New scan</value>
+  </data>
+  <data name="newsetting" xml:space="preserve">
+    <value>"To apply the new language  you need to restart the App."</value>
+  </data>
+  <data name="new_counting" xml:space="preserve">
+    <value>New Counting</value>
+  </data>
+  <data name="new_scan" xml:space="preserve">
+    <value>New Scan</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="notDBfile" xml:space="preserve">
+    <value>this is not a database file</value>
+  </data>
+  <data name="note" xml:space="preserve">
+    <value>Note:</value>
+  </data>
+  <data name="not_valid_storage" xml:space="preserve">
+    <value>Storagecode not correct</value>
+  </data>
+  <data name="not_valid_StoregId" xml:space="preserve">
+    <value>Not valid Inventory</value>
+  </data>
+  <data name="not_valid_user" xml:space="preserve">
+    <value>User is not valid</value>
+  </data>
+  <data name="Number_occupy" xml:space="preserve">
+    <value>Number/Occupy</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="passwrong" xml:space="preserve">
+    <value>Invalid Password , Try again!</value>
+  </data>
+  <data name="please_select_InventurId" xml:space="preserve">
+    <value>Please select an Inventory !</value>
+  </data>
+  <data name="quantity_error_dialog_description" xml:space="preserve">
+    <value>Please fill only Qty1 or Qty2.</value>
+  </data>
+  <data name="quantity_error_dialog_title" xml:space="preserve">
+    <value>Quantity Error</value>
+  </data>
+  <data name="quantity_missing_dialog_description" xml:space="preserve">
+    <value>Quantity Qty1 is required</value>
+  </data>
+  <data name="quantity_missing_dialog_title" xml:space="preserve">
+    <value>Quantity missing</value>
+  </data>
+  <data name="RestorAsk" xml:space="preserve">
+    <value>Would you like to Restore the default settings?</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="RestoreDefaults" xml:space="preserve">
+    <value>Restore Defaults</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="saveDataBase" xml:space="preserve">
+    <value>The DataBase have been saved successfully!</value>
+  </data>
+  <data name="saveitemwithserinummer" xml:space="preserve">
+    <value>item(s) saved successfully</value>
+  </data>
+  <data name="saveSerialNR" xml:space="preserve">
+    <value>Do you want to save the serial numbers?</value>
+  </data>
+  <data name="save_file" xml:space="preserve">
+    <value>Save file</value>
+  </data>
+  <data name="Scanbarcode" xml:space="preserve">
+    <value>Scan barcode</value>
+  </data>
+  <data name="select_file" xml:space="preserve">
+    <value>Select file</value>
+  </data>
+  <data name="serials_missing_dialog_description" xml:space="preserve">
+    <value>This item requires a serial number.</value>
+  </data>
+  <data name="serials_missing_dialog_title" xml:space="preserve">
+    <value>Serials missing</value>
+  </data>
+  <data name="serial_numbers" xml:space="preserve">
+    <value>Serial numbers</value>
+  </data>
+  <data name="seriennummerfähig" xml:space="preserve">
+    <value>serial capable</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="share_file" xml:space="preserve">
+    <value>Share file</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="StoregCode" xml:space="preserve">
+    <value>Storeg Code</value>
+  </data>
+  <data name="successful" xml:space="preserve">
+    <value>successful</value>
+  </data>
+  <data name="succsave" xml:space="preserve">
+    <value>The settings have been saved successfully!</value>
+  </data>
+  <data name="upload_counting" xml:space="preserve">
+    <value>Upload Counting</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserIdcannotbefound" xml:space="preserve">
+    <value>User Id cannot be found</value>
+  </data>
+  <data name="UserPassword" xml:space="preserve">
+    <value>User password</value>
+  </data>
+  <data name="user_number" xml:space="preserve">
+    <value>User number</value>
+  </data>
+  <data name="WaAgAInfo" xml:space="preserve">
+    <value>WA/AG/A Info</value>
+  </data>
+  <data name="WAoperation" xml:space="preserve">
+    <value>WA/ operation:</value>
+  </data>
+  <data name="with_Error" xml:space="preserve">
+    <value>with error:</value>
+  </data>
+  <data name="Workplace" xml:space="preserve">
+    <value>Workplace:</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+</root>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors" 
+             xmlns:vm="clr-namespace:InventurApp.ViewModels"
+              xmlns:resources="clr-namespace:InventurApp.Culture"
+             x:Class="InventurApp.Views.NewCountingPage"
+            >
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.new_counting}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:NewCountingViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <ScrollView Grid.Row="1">
+                    <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                        <dxe:TextEdit x:Name="TxtUseNumber"  LabelText= "{x:Static resources:AppResources.user_number}" Text="{Binding UserNumber}"  Completed="TxtUseNumber_CompletedAsync" />
+                        <dxe:TextEdit x:Name="TxtStoregcode" LabelText= "{x:Static resources:AppResources.StoregCode}"  Text="{Binding StorageCode}" Completed="TxtStoregcode_Completed" TextChanged="TxtBarcode1_TextChanged"/>
+                         <ImageButton  x:Name="BtnSearch" Source="scanicon.png"  HorizontalOptions="Center" Clicked="BtnScan_Clicked" VerticalOptions="CenterAndExpand"  WidthRequest="55" Margin="0,13,0,10"/>
+                        <Button Text="{x:Static resources:AppResources._continue}"  Command="{Binding SaveLoginDataCommand}"  HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

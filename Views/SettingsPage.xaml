@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             xmlns:resources="clr-namespace:InventurApp.Culture" 
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"          
+             x:Class="InventurApp.Views.SettingsPage"
+             Title="{x:Static resources:AppResources.settings}">
+    <ContentPage.BindingContext>
+        <vm:SettingsViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <ScrollView Grid.Row="1">
+                    <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+
+                        <dxe:TextEdit IsEnabled="{Binding IsEnabled}" LabelText= "Server Url" Text="{Binding Settings.ServerUrl}"/>
+                        <dxe:NumericEdit IsEnabled="{Binding IsEnabled}"  LabelText= "Port" Value="{Binding Settings.Port}"  />
+                        <dxe:NumericEdit IsEnabled="{Binding IsEnabled}"  LabelText= "{x:Static resources:AppResources.DeviceID}" Value="{Binding Settings.DeviceId}" />
+                        <dxe:PasswordEdit IsEnabled="{Binding IsEnabled}"  LabelText= "{x:Static resources:AppResources.ApiKey}" Text="{Binding Settings.APIKey}" />
+                        <dxe:PasswordEdit IsEnabled="{Binding IsEnabled}"  LabelText= "{x:Static resources:AppResources.UserPassword}"  Text="{Binding Settings.UserPassword}"  />
+                        <dxe:PasswordEdit IsEnabled="{Binding IsEnabled}"  LabelText= "Api Value"  Text="{Binding Settings.APIKeyPassword}"  />
+                        
+                        <Label Text="{x:Static resources:AppResources.Languge}"></Label>
+                        <dxe:ComboBoxEdit IsEnabled="{Binding IsEnabled}" ItemsSource="{Binding Languages}" SelectedItem="{Binding Settings.Language}" FocusedBorderColor="{StaticResource Primary}" BorderColor="{StaticResource Primary}" Margin="0,0,0,20">
+                        </dxe:ComboBoxEdit>
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="{x:Static resources:AppResources.RestoreDefaults}" Command="{Binding RestoreCommand}" IsVisible="{Binding IsEnabled}" HorizontalOptions="FillAndExpand" />
+                            <Button Text="{x:Static resources:AppResources.Save}"   Clicked="Button_Clicked"  HorizontalOptions="FillAndExpand"  IsVisible="{Binding IsEnabled} "/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Button Text="{x:Static resources:AppResources.Edit}"  Command="{Binding EnableEditCommand}" IsVisible="{Binding IsEditButtonEnabled}" HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

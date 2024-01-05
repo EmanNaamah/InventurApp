@@ -1,0 +1,22 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             x:Class="InventurApp.Views.ExportCountingOfflinePage"
+              xmlns:resources="clr-namespace:InventurApp.Culture" 
+            >
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.save_file}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:ExportCountingOfflineViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="20,30,20,0" Spacing="25">
+            <Button  Text="{x:Static resources:AppResources.export_counting}" Command="{Binding ExportToDatCommand}" />
+            <!--<Button  Text="export Artikel(just for creat testfile)" FontSize="15" Command="{Binding ExportArtikelToDatCommand}" /> -->
+            <Button  Text="{x:Static resources:AppResources.share_file}" Command="{Binding ShareDatCommand}" />
+          
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InventurApp.Views.AboutPage"
+             xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             Shell.NavBarIsVisible="False"    
+             BackgroundImageSource="store.png">
+ 
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="10, 20, 10, 0" />
+            <On Platform="Android, UWP" Value="10, 0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackLayout Orientation="Vertical"  Grid.Row="2" Grid.Column="1" Opacity="1">
+            <Frame OutlineColor="{StaticResource Primary}" CornerRadius="20"  Padding="10">
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center" Spacing="10" Padding="10,0,10,10">
+                    <Image Source="{AppThemeBinding Light=icon.png, Dark=darklogo.png}" WidthRequest="30" />
+                    <Label Text="MiCLAS INVENTUR APP"  FontSize="18" FontFamily="Arial"/>
+                    <Button  Text="Start" Command="{Binding OpenMenuPage}" />
+                </StackLayout>
+            </Frame>
+         
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

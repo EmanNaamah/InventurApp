@@ -1,0 +1,38 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             x:Class="InventurApp.Views.DownloadItemPage"
+             xmlns:resources="clr-namespace:InventurApp.Culture" 
+            >
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.download_item_list}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:DownloadItemViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <ScrollView Grid.Row="1">
+                    <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                        <Label Text="Warengruppe"></Label>
+                        <dxe:ComboBoxEdit IsEnabled="{Binding IsGoodsGroupsEnabled}"  ItemsSource="{Binding GoodsGroups}" SelectedItem="{Binding SelectedGoodsGroup}" FocusedBorderColor="{StaticResource Primary}" BorderColor="{StaticResource Primary}" Margin="0,0,0,20"/>
+                        <Label Text="Artikelgruppe"></Label>
+                        <dxe:ComboBoxEdit IsEnabled="{Binding IsArticleGroupsEnabled}" ItemsSource="{Binding ArticleGroups}" SelectedItem="{Binding SelectedArticleGroup}" FocusedBorderColor="{StaticResource Primary}" BorderColor="{StaticResource Primary}" Margin="0,0,0,20"/>
+                        <Label Text="UnterArtikelGruppe"></Label>
+                        <dxe:ComboBoxEdit IsEnabled="{Binding IsUnderArticleGroupsEnabled}" ItemsSource="{Binding UnderArticleGroups}" SelectedItem="{Binding SelectedUnderArticleGroup}" FocusedBorderColor="{StaticResource Primary}" BorderColor="{StaticResource Primary}" Margin="0,0,0,20"/>
+                        <Button Text="DownLoad"  Command="{Binding LoadAllFilterItemsCommand}"  HorizontalOptions="FillAndExpand" Margin="0,0,0,20"/>
+                        <Button Text="Reset"  Command="{Binding ResetCommand}"  HorizontalOptions="FillAndExpand" />
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"    Color="{StaticResource Primary}" HeightRequest="140" VerticalOptions="Center"  ></ActivityIndicator>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

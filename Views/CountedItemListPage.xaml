@@ -1,0 +1,32 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             x:Class="InventurApp.Views.CountedItemListPage" 
+             xmlns:dxg="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
+             xmlns:resources="clr-namespace:InventurApp.Culture" 
+             Title=" Counted Items List">
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.inventur_list}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:CountedItemListViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <dxg:DataGridView x:Name="grid1" ShowAutoFilterRow="True" ColumnHeaderHeight="60" AutoFilterRowHeight="40" ItemsSource="{Binding Items}" RowHeight="45">
+            <dxg:DataGridView.CellStyle>
+                <dxg:CellStyle Padding="5" FontColor="Black" FontSize="14" SelectionColor="#f5be40" SelectionFontColor="Black"/>
+            </dxg:DataGridView.CellStyle>
+            <dxg:DataGridView.ColumnHeaderStyle>
+                <dxg:ColumnHeaderStyle FontSize="14" FontColor="#000" FontAttributes="Bold" />
+            </dxg:DataGridView.ColumnHeaderStyle>
+            <dxg:DataGridView.Columns>
+                <dxg:TextColumn   FieldName="ArticleNumber" Width="150" Caption="{x:Static resources:AppResources.Item}" AutoFilterCondition="Contains"/>
+                <dxg:TextColumn   FieldName="Storage" MinWidth="150" Caption="{x:Static resources:AppResources.StoregCode}"  AutoFilterCondition="Contains"/>
+                <dxg:TextColumn FieldName="Qtyunit1" Caption="ME1"/>
+                <dxg:TextColumn FieldName="Qtyunit2" Caption="ME2"/>
+                <dxg:TextColumn   FieldName="Charge" MinWidth="100"/>
+                <dxg:TextColumn   FieldName="Serialnumber" MinWidth="100" />
+                <dxg:TextColumn   FieldName="KZLand" MinWidth="100" /> 
+            </dxg:DataGridView.Columns>
+        </dxg:DataGridView>
+    </ContentPage.Content>
+</ContentPage>

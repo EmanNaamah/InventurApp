@@ -1,0 +1,86 @@
+﻿
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             x:Class="InventurApp.App"
+             >
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+    -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#fbca05</Color>
+            <Color x:Key="Secondry">#5b686a</Color>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor" Value="{StaticResource Primary}"/>
+                <Setter Property="BorderRadius" Value="12" />
+                <Setter Property="TextColor" Value="#fff" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="BackgroundColor" Value="{StaticResource Secondry}"/>
+            </Style>
+            <Style TargetType="dxe:TextEdit">
+                <Setter Property="BoxMode" Value="Outlined"/>
+                <Setter Property="ClearIconVisibility" Value="Auto"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="FocusedBorderColor" Value="{StaticResource Primary}" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="BorderColor" Value="{StaticResource Secondry}" />
+                <Setter Property="ClearIconVisibility" Value="Auto" />
+            </Style>
+            <Style TargetType="SearchBar">
+                <Setter Property="CancelButtonColor" Value="{StaticResource Primary}"/>
+                <Setter Property="PlaceholderColor" Value="{StaticResource Secondry}"/>
+                <Setter Property="TextColor" Value="#000"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontAttributes" Value="Italic" />
+               </Style>
+            <Style TargetType="dxe:NumericEdit">
+                <Setter Property="ErrorText" Value="the value must be bigger than 0"/>
+                <Setter Property="BoxMode" Value="Outlined"/>
+                <Setter Property="ClearIconVisibility" Value="Auto"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="TextHorizontalAlignment" Value="Start"/>
+                <Setter Property="FocusedBorderColor" Value="{StaticResource Primary}" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="WidthRequest" Value="50" />
+                <Setter Property="BorderColor" Value="{StaticResource Secondry}" />
+            </Style>
+            <Style TargetType="dxe:PasswordEdit">
+                <Setter Property="BoxMode" Value="Outlined"/>
+                <Setter Property="ClearIconVisibility" Value="Auto"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Margin" Value="2" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="FocusedBorderColor" Value="{StaticResource Primary}" />
+                <Setter Property="WidthRequest" Value="250" />
+                <Setter Property="BorderColor" Value="{StaticResource Secondry}" />
+            </Style>
+            <Style  TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            <Style TargetType="dxe:CheckEdit">
+                <Setter Property="CheckBoxColor" Value="{StaticResource Secondry}"/>
+                <Setter Property="LabelFontSize" Value="18"/>
+                <Setter Property="CheckedCheckBoxColor" Value="{StaticResource Primary}"/>
+                <Setter Property="Margin" Value="0,0,0,11" />
+                <Setter Property="WidthRequest" Value="250" />
+            </Style>
+
+            <Style TargetType="dxe:ComboBoxEdit">
+                <Setter Property="BorderColor" Value="{StaticResource Secondry}"/>
+                <Setter Property="FocusedBorderColor" Value="{StaticResource Secondry}"/>
+                <Setter Property="TextColor" Value="#000"/>
+                <Setter Property="LabelColor" Value="#000"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

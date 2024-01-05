@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:InventurApp.Views"
+       Title="InventurApp"
+              xmlns:resources="clr-namespace:InventurApp.Culture"
+       x:Class="InventurApp.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+    
+    
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="#5b686a" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#5b686a"/>
+            </Style>
+            
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+    
+    <TabBar x:Name="mainbar" Route="main">
+        <Tab Title="{x:Static resources:AppResources.settings}" Icon="settings.png" Route="SettingsPage">
+            <ShellContent ContentTemplate="{DataTemplate local:SettingsPage}"/>
+        </Tab>
+        <Tab x:Name="main_tab_bar_dial" Title="Home" Icon="home2.png" Route="AboutPage">
+            <ShellContent  ContentTemplate="{DataTemplate local:AboutPage}"/>
+        </Tab>
+        <Tab Title="{x:Static resources:AppResources.info}" Icon="icon_about.png" Route="InfoPage">
+            <ShellContent  ContentTemplate="{DataTemplate local:InfoPage}"/>
+        </Tab>
+     
+    </TabBar>
+</Shell>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:resources="clr-namespace:InventurApp.Culture"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:InventurApp.ViewModels"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             x:Class="InventurApp.Views.AddSerialNummerPage"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             >
+    <ContentPage.BindingContext>
+        <vm:ContinueCountingViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill" Margin="15,0,15,0">
+                <ScrollView  Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" Margin="0,20,0,0" Spacing="10">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Label Text="{Binding SerialNumberList.Count}"/>
+                            <Label Text="/"/>
+                            <Label Text="{Binding MaximalSerialNR}"/>
+                        </StackLayout>
+                        <dxe:TextEdit  x:Name="TxtBarcode" Text="{Binding NewSerialNumber}" Completed="BtnSearch_Clicked" LabelText="{x:Static resources:AppResources.IDNumber}" />
+                        <ImageButton  x:Name="BtnSearch" Source="scanicon.png"  HorizontalOptions="Center" Clicked="BtnScan_Clicked" BorderColor="White" CornerRadius="1" VerticalOptions="CenterAndExpand"  WidthRequest="55" />
+                        <ListView x:Name="SrNRView"  ItemsSource="{Binding SerialNumberList}" SeparatorColor="Black" VerticalScrollBarVisibility="Default">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <ViewCell.View>
+                                            <StackLayout Orientation="Horizontal"  >
+                                                <Label Text="{Binding SerialNummber}"  HorizontalOptions="StartAndExpand" Margin="10,0,0,0" FontSize="18"></Label>
+                                                <Button Text="{x:Static resources:AppResources.delete}" Background="#fff" BorderColor="White" TextColor="red" CommandParameter="{Binding SerialNummber}" Margin="5" Padding="4" FontSize="12" HorizontalOptions="Center" Clicked="OnDelete">
+                                                </Button>
+                                            </StackLayout>
+                                        </ViewCell.View>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

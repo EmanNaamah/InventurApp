@@ -1,0 +1,27 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vm="clr-namespace:InventurApp.ViewModels" 
+             x:Class="InventurApp.Views.MenuPage"
+          xmlns:resources="clr-namespace:InventurApp.Culture"
+           >
+    <Shell.TitleView>
+        <Label Text="{x:Static resources:AppResources.menu}" Margin="0,15,0,0" />
+    </Shell.TitleView>
+    <ContentPage.BindingContext>
+        <vm:MenuViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="Center" Padding="20,0,20,0">
+            <StackLayout  Spacing="8">
+                <Button Text="{x:Static resources:AppResources.new_counting}"              BackgroundColor="#fff"                     TextColor="{StaticResource Secondry}" Command="{Binding OpenNewCounting}"           FontSize="15" FontAttributes="Bold"/>
+                <Button Text="{x:Static resources:AppResources.continue_counting}"         BackgroundColor="#fff"                     TextColor="{StaticResource Secondry}" Command="{Binding OpenContinueCounting}"      FontSize="15" FontAttributes="Bold"/>
+                <Button Text="{x:Static resources:AppResources.inventur_list}"             BackgroundColor="{StaticResource Primary}" TextColor="{StaticResource Secondry}" Command="{Binding OpenCountedItemList}"       FontSize="15" FontAttributes="Bold"/>
+                <Button Text="{x:Static resources:AppResources.Artikel_list}"              BackgroundColor="{StaticResource Primary}" TextColor="{StaticResource Secondry}" Command="{Binding OpenArtikellist}"           FontSize="15" FontAttributes="Bold"/>
+                <Button Text="{x:Static resources:AppResources.download_item_list}"        BackgroundColor="#fff"                     TextColor="{StaticResource Secondry}" Command="{Binding OpenDownloadItemlist}"      FontSize="15" FontAttributes="Bold" IsEnabled="{Binding IsWebApiCorrect}"/>
+                <Button Text="{x:Static resources:AppResources.import_item_list_offline}"  BackgroundColor="#fff"                     TextColor="{StaticResource Secondry}" Command="{Binding OpenImportItemlistOffline}" FontSize="15" FontAttributes="Bold"/>
+                <Button Text="{x:Static resources:AppResources.upload_counting}"           BackgroundColor="{StaticResource Primary}" TextColor="{StaticResource Secondry}" Command="{Binding OpenUploadCounting}"        FontSize="15" FontAttributes="Bold" IsEnabled="{Binding IsWebApiCorrect}"/>
+                <Button Text="{x:Static resources:AppResources.export_counting_offline}"   BackgroundColor="{StaticResource Primary}" TextColor="{StaticResource Secondry}" Command="{Binding OpenExportCountingOffline}" FontSize="15" FontAttributes="Bold"/>
+                </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
