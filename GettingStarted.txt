@@ -17,7 +17,7 @@ Try it out:
 Keep going and try more changes!
 
 QuickStart Guide
-----------------
+-----------------
 
 Learn more of the fundamentals for building apps with Xamarin here: https://aka.ms/xamarin-quickstart
 

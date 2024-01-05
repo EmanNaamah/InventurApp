@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GK6bKZo5idGZGpGSoClsMJUSWOF/39CUQ0aZEBLISfI/MUZPn8g3DYRe32NauduAQOpCQMGTUEeLJ7IXbCe3/Q==",
+  "dgSpecHash": "Ieqa4d0C06oYLrPDOwNFIZgZjw0guPVXHMSIAoT3vL0XIQr5OSA5Ec7b9I3pEmGBwM7kZ6RIHaeV1vhDsiswRA==",
   "success": true,
-  "projectFilePath": "C:\\ERPGit\\TerminalApp\\InventurApp2\\InventurApp\\InventurApp\\InventurApp\\InventurApp.csproj",
+  "projectFilePath": "C:\\ERPGit\\InventurApp\\InventurApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\TEMP\\.nuget\\packages\\documentformat.openxml\\2.14.0\\documentformat.openxml.2.14.0.nupkg.sha512",
     "C:\\Users\\TEMP\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ERPGit\\TerminalApp\\InventurApp2\\InventurApp\\InventurApp\\InventurApp\\InventurApp.csproj": {}
+    "C:\\ERPGit\\InventurApp\\InventurApp.csproj": {}
   },
   "projects": {
-    "C:\\ERPGit\\TerminalApp\\InventurApp2\\InventurApp\\InventurApp\\InventurApp\\InventurApp.csproj": {
+    "C:\\ERPGit\\InventurApp\\InventurApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ERPGit\\TerminalApp\\InventurApp2\\InventurApp\\InventurApp\\InventurApp\\InventurApp.csproj",
+        "projectUniqueName": "C:\\ERPGit\\InventurApp\\InventurApp.csproj",
         "projectName": "InventurApp",
-        "projectPath": "C:\\ERPGit\\TerminalApp\\InventurApp2\\InventurApp\\InventurApp\\InventurApp\\InventurApp.csproj",
+        "projectPath": "C:\\ERPGit\\InventurApp\\InventurApp.csproj",
         "packagesPath": "C:\\Users\\TEMP\\.nuget\\packages\\",
-        "outputPath": "C:\\ERPGit\\TerminalApp\\InventurApp2\\InventurApp\\InventurApp\\InventurApp\\obj\\",
+        "outputPath": "C:\\ERPGit\\InventurApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
